@@ -21,7 +21,7 @@ export default function Newsfull(props) {
                 height={720}
             />
             <div className={styles.news}>
-                {props.text}
+                <p>Texto da notícia aqui</p>
             </div>
         </div>
     )
