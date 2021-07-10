@@ -1,0 +1,32 @@
+.box{
+    width:100%;
+    height: auto;
+    min-height: 410px;
+    margin-bottom: 10px;
+    background-color: #fff;    
+}
+.title{
+    padding: 22px;
+}
+.title h1{
+    font-size: 35px;
+    color: #000;
+}
+.title p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #525252;
+}
+.title span{
+   color: #626262;
+   font-size: 15px;
+   font-weight: bold; 
+   display: block;
+}
+.title em{
+    color: #626262;
+    font-size: 12px;
+}
+.news{
+    color:#525252;
+}
