@@ -1,0 +1,27 @@
+.box{
+    height: 100vh;
+    background-color: #fff;
+    padding: 60px;
+    text-align: center;
+}
+.box h1{
+    font-size: 22px;
+    color:#343434;
+}
+.box p{
+    color:#626262;
+    font-size: 13px;
+}
+.box button{
+    font-size: 16px;
+    width:250px;
+    height: 56px;
+    background-color: #4AB306;
+    color:#fff;
+    border: solid #4AB306;
+    border-radius: 10px;
+}
+.box button:hover{
+    border: #55ca07;
+    background-color: #55ca07;
+}

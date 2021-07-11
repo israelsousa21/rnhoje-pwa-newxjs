@@ -14,10 +14,10 @@ export default function Home() {
     const resp = await fetch(`https://rnhoje.com.br/api/v1/news/detachhome/?limit=20&page=1`)
     const dataNews = await resp.json()
     setNews(dataNews.data)
-}
-useEffect(() =>{
-  getNews()
-}, [])
+  }
+  useEffect(() => {
+    getNews()
+  }, [])
 
   return (
     <div className={styles.container}>
@@ -29,8 +29,8 @@ useEffect(() =>{
       <Topbar />
       <Separator />
       {
-        newsData.map((news) =>(
-          <News category={news.category} 
+        newsData.map((news) => (
+          <News category={news.category}
             title={news.title}
             image={news.photos.medium}
             by={news.author_name}
@@ -41,8 +41,8 @@ useEffect(() =>{
         ))
       }
       <Separator />
-      
-      <Menu />
+
+      <Menu page="home" />
 
     </div>
   )
