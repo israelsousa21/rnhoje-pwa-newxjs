@@ -11,7 +11,7 @@ export default function Home() {
   const [newsData, setNews] = useState([]);
 
   async function getNews() {
-    const resp = await fetch(`https://rnhoje.com.br/api/v1/news/detachhome/?limit=20&page=1`)
+    const resp = await fetch(`https://rnhoje.com.br/api/v1/news/detachhome/?limit=40&page=1`)
     const dataNews = await resp.json()
     setNews(dataNews.data)
   }
@@ -32,8 +32,8 @@ export default function Home() {
         newsData.map((news) => (
           <News category={news.category}
             title={news.title}
+            miniheadline={news.miniheadline}
             image={news.photos.medium}
-            by={news.author_name}
             date={news.datehour}
             visits={news.views}
             seourl={news.seourl}

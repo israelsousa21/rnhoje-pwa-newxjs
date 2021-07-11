@@ -14,6 +14,7 @@ export default function News(props){
                 <div class={styles.top}>
                     <span>{props.category}</span>
                     <h1>{props.title}</h1>
+                    <p>{props.miniheadline}</p>
                 </div>
                 <Image 
                     loader={myLoader}
@@ -23,7 +24,7 @@ export default function News(props){
                     width={1280}
                     height={720} 
                 />
-                <div className={styles.date}>Por {props.by} - Visualizações <strong>{props.visits}</strong></div>
+                <div className={styles.date}>{props.date} - Em <strong>{props.category}</strong></div>
             </div>
         </Link>
     )
