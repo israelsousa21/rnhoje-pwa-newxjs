@@ -1,0 +1,22 @@
+.box{
+    background-color: #fff;
+    min-height: 100vh;
+    padding: auto;
+    text-align: center;
+}
+.box button{
+    font-size: 16px;
+    width:250px;
+    height: 56px;
+    background-color: #4AB306;
+    color:#fff;
+    border: solid #4AB306;
+    border-radius: 10px;
+    margin-top: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+.box button:hover{
+    border: #55ca07;
+    background-color: #55ca07;
+}
