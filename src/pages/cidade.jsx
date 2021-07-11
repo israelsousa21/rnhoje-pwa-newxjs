@@ -1,4 +1,4 @@
-import Menu from '../components/Menu'
+import Menubar from '../components/Menubar'
 import styles from '../styles/Cidade.module.css'
 import Image from 'next/image'
 import imgCidade from '../../public/images/miscelanious/my-location.svg'
@@ -18,7 +18,7 @@ export default function Cidade() {
                     sua cidade, estado, Brasil e mundo.</p>
                 <button>ENTRAR</button>
             </div>
-            <Menu page="cidade" />
+            <Menubar page="cidade" />
         </>
     )
 }

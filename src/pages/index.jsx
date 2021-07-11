@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Topbar from '../components/Topbar'
 import Separator from '../components/Separator'
-import Menu from '../components/Menu'
+import Menubar from '../components/Menubar'
 import News from '../components/News'
 import styles from '../styles/Home.module.css'
 
@@ -42,7 +42,7 @@ export default function Home() {
       }
       <Separator />
 
-      <Menu page="home" />
+      <Menubar page="home" />
 
     </div>
   )

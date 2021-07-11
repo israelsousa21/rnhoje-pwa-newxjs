@@ -1,4 +1,4 @@
-import styles from '../styles/Menu.module.css'
+import styles from '../styles/Menubar.module.css'
 import Link from 'next/link'
 import { UilEstate, 
          UilLocationPoint, 
@@ -6,7 +6,7 @@ import { UilEstate,
          UilBookmark,
          UilBars } from '@iconscout/react-unicons'
 
-export default function Menu(props){
+export default function Menubar(props){
     var sizeIcon = 22
     var colorIconUnselected = '#909090'
     var colorIconSelected   = '#050505'
