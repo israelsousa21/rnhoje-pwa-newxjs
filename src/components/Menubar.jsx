@@ -4,18 +4,20 @@ import { UilEstate,
          UilLocationPoint, 
          UilSearch,
          UilBookmark,
-         UilBars } from '@iconscout/react-unicons'
+         UilBars,
+         UilShoppingBag } from '@iconscout/react-unicons'
 
 export default function Menubar(props){
     var sizeIcon = 22
     var colorIconUnselected = '#909090'
     var colorIconSelected   = '#050505'
 
-    var colorHome   = (props.page === 'home') ? colorIconSelected : colorIconUnselected
-    var colorPin    = (props.page === 'cidade') ? colorIconSelected : colorIconUnselected
-    var colorSearch = (props.page === 'busca') ? colorIconSelected : colorIconUnselected
-    var colorSave   = (props.page === 'salvos') ? colorIconSelected : colorIconUnselected
-    var colorMenu   = (props.page === 'menu') ? colorIconSelected : colorIconUnselected
+    var colorHome     = (props.page === 'home') ? colorIconSelected : colorIconUnselected
+    var colorPin      = (props.page === 'cidade') ? colorIconSelected : colorIconUnselected
+    var colorStore    = (props.page === 'loja') ? colorIconSelected : colorIconUnselected
+    var colorSearch   = (props.page === 'busca') ? colorIconSelected : colorIconUnselected
+    var colorSave     = (props.page === 'salvos') ? colorIconSelected : colorIconUnselected
+    var colorMenu     = (props.page === 'menu') ? colorIconSelected : colorIconUnselected
     
     return(
         <div className={styles.box}>
@@ -36,7 +38,14 @@ export default function Menubar(props){
                         </a>
                     </Link>
                 </li>
-                
+                <li>
+                    <Link href="/loja">
+                        <a>
+                            <UilShoppingBag size={sizeIcon} color={colorStore} />
+                            <span style={{color:colorStore}}>loja</span>
+                        </a>
+                    </Link>
+                </li>
                 <li>
                     <Link href="/busca">
                         <a>
