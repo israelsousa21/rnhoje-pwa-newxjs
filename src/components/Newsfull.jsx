@@ -20,9 +20,7 @@ export default function Newsfull(props) {
                 width={1280}
                 height={720}
             />
-            <div className={styles.news}>
-                <p>Texto da notícia aqui</p>
-            </div>
+            <div className={styles.news} dangerouslySetInnerHTML={{__html: props.text}} />
         </div>
     )
 }
