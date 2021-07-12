@@ -30,5 +30,6 @@
 .news{
     margin-top: 20px;
     padding: 10px;
-    color:#525252;
+    color:#000;
+    font-size: 16px;
 }
