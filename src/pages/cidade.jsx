@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Menubar from '../components/Menubar'
 import styles from '../styles/Cidade.module.css'
 import Image from 'next/image'
@@ -16,7 +17,9 @@ export default function Cidade() {
                 <h1>As notícias da sua cidade em primeira mão</h1>
                 <p>Faça o login e acompanhe as últimas notícias da
                     sua cidade, estado, Brasil e mundo.</p>
-                <button>ENTRAR</button>
+                <Link href="/login">
+                    <button>ENTRAR</button>
+                </Link>
             </div>
             <Menubar page="cidade" />
         </>

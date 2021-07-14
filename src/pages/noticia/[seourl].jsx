@@ -16,12 +16,15 @@ export default function Seourl(){
       getNews()
     }, [])
 
-    console.log('>>>'+router.query.seourl)
+    //console.log('>>>'+router.query.seourl)
 
+    if (newsData === null) {
+        return <h2>Carregando...</h2>;
+      }
     return(
         <>
         {
-            newsData.map((news) =>(
+            newsData?.map((news) =>(
             <>
             <Topbarnews 
                 category={news.category}
