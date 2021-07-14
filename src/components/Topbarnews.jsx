@@ -2,8 +2,6 @@ import styles from '../styles/Topbarnews.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import LogoRnHoje from '../../public/images/logos/avatar-rounded-green.png'
-import IconBack from '../../public/images/icons/icon-arrow-back.png'
-import IconSave from '../../public/images/icons/icon-save.png'
 import {
     UilBookmark,
     UilShareAlt,

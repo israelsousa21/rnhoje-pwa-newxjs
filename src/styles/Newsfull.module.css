@@ -1,36 +1,67 @@
-.box{
-    width:100%;
+.box {
+    width: 100%;
     height: auto;
     min-height: 410px;
     margin-bottom: 10px;
-    background-color: #fff;    
+    background-color: #fff;
 }
-.title{
+
+.title {
     padding: 22px;
 }
-.title h1{
+
+.title h1 {
     font-size: 35px;
     color: #000;
 }
-.title p{
+
+.title p {
     font-size: 20px;
     font-weight: bold;
     color: #525252;
 }
-.title span{
-   color: #626262;
-   font-size: 15px;
-   font-weight: bold; 
-   display: block;
+
+.title span {
+    color: #626262;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
 }
-.title em{
+
+.title em {
     color: #626262;
     font-size: 12px;
 }
-.news{
+
+.title span {
+    margin-top: -30px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    position: relative;
+}
+
+.title em {
+    position: relative;
+    margin-top: 60px;
+}
+
+.imageauthor {
+    width: 41px;
+    height: 41px;
+    display: block;
+    background-color: #4AB306;
+    border: 1px #4AB306 solid;
+    border-radius: 50%;
+}
+
+.title img {
+    border-radius: 50%;
+}
+
+.news {
     margin-top: 20px;
     padding: 25px;
-    color:#000;
+    color: #000;
     font-size: 20px;
     font-weight: 500;
 }
