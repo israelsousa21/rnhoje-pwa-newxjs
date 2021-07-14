@@ -16,7 +16,7 @@ export default function Topbarnews(props) {
                 <div className={styles.back}>
                     <Link href="/">
                             <a>
-                                <UilArrowLeft size={25} color="#999" />
+                                <UilArrowLeft size={35} color="#999" />
                             </a>
                     </Link>
                 </div>
