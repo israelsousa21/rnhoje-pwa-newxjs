@@ -4,14 +4,20 @@ import Link from 'next/link'
 import LogoRnHoje from '../../public/images/logos/avatar-rounded-green.png'
 import IconBack from '../../public/images/icons/icon-arrow-back.png'
 import IconSave from '../../public/images/icons/icon-save.png'
-import IconShare from '../../public/images/icons/icon-share.png'
+import {
+    UilBookmark,
+    UilShareAlt,
+    UilArrowLeft
+} from '@iconscout/react-unicons'
 export default function Topbarnews(props) {
     return (
         <div className={styles.box}>
             <div className={styles.backlogo}>
                 <div className={styles.back}>
                     <Link href="/">
-                        <Image src={IconBack} alt="Voltar" width={21} height={21} layout="fixed" />
+                            <a>
+                                <UilArrowLeft size={25} color="#999" />
+                            </a>
                     </Link>
                 </div>
                 <div className={styles.logo}>
@@ -23,12 +29,16 @@ export default function Topbarnews(props) {
                 <span>{props.category}</span>
             </div>
             <div className={styles.saveshare}>
-                <Link href="/salvar">
-                    <Image src={IconSave} alt="Salvar" width={23} height={23} layout="fixed" />
+                <Link href={`/salvar/${props.seourl}`}>
+                        <a>
+                            <UilBookmark size={23} color="#999" />
+                        </a>
                 </Link>
-                <Link href="/compartilhar">
-                    <Image src={IconShare} alt="Compartilhar" width={21} height={21} layout="fixed" />
-                </Link>
+                   <Link href={`/compartilhar/${props.seourl}`}>
+                        <a>
+                            <UilShareAlt size={23} color="#999" />
+                        </a>
+                    </Link>
             </div>
         </div>
     )

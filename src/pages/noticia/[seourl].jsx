@@ -6,7 +6,8 @@ import Newsfull from '../../components/Newsfull'
 
 export default function Seourl(){
     const router = useRouter()
-    const [newsData, setNews] = useState([]);
+    const [newsData, setNews] = useState([])
+
     async function getNews() {
         const resp = await fetch(`https://rnhoje.com.br/api/v1/news/${router.query.seourl}`)
         const dataNews = await resp.json()
@@ -16,18 +17,21 @@ export default function Seourl(){
       getNews()
     }, [])
 
-    //console.log('>>>'+router.query.seourl)
 
-    if (newsData === null) {
-        return <h2>Carregando...</h2>;
-      }
-    return(
-        <>
-        {
+    // let currentUrlParams = new URLSearchParams(window.location.search)
+    // currentUrlParams.set('page', pageNumber)
+    // this.props.history.push(window.location.pathname + "?" + currentUrlParams.toString())
+            if(newsData === null){
+                getNews()
+            }
+            return(
+            <>
+            {            
             newsData?.map((news) =>(
             <>
             <Topbarnews 
                 category={news.category}
+                seourl={news.seourl}
             />
             <Separator />
             <Newsfull 
@@ -41,7 +45,7 @@ export default function Seourl(){
             />
             </>
             ))
-        }
-        </>
-    )
+            }
+            </>
+        )    
 }
