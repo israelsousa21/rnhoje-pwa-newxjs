@@ -3,7 +3,7 @@ export default function Auth() {
     return {
         name: 'Israel',
         email: 'me@israelsousa.com.br',
-        avatar: 'https://github.com/israelsousa21.png'
+        avatar: 'https://github.com/MaxwellAraujo.png'
     }
 
     // if (!localStorage.getItem('rnhoje-user')) {
