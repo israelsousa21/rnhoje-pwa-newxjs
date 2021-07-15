@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     getNews()
   }, [])
-
+ 
   return (
     <div className={styles.container}>
       <Head>
@@ -28,6 +28,7 @@ export default function Home() {
 
       <Topbar />
       <Separator />
+      
       {
         newsData.map((news) => (
           <News category={news.category}
