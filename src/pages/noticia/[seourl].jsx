@@ -13,6 +13,7 @@ export default function Seourl() {
         const dataNews = await resp.json()
         setNews(dataNews.data)
     }
+    
     useEffect(() => {
         getNews()
     }, [])

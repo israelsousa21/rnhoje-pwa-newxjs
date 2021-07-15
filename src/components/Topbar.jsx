@@ -8,8 +8,8 @@ export default function Topbar() {
     const userData = Auth()
 
     function Logado() {
-        console.log(userData)
         if(userData){
+            console.log(userData.avatar)
             const loaderAvatar = ({ src }) => { return `${userData.avatar}` }
             return (
                 <div className={styles.useravatar}>
@@ -18,7 +18,7 @@ export default function Topbar() {
                         <Image
                             loader={loaderAvatar} 
                             src={userData.avatar} 
-                            alt={userData.name} 
+                            alt={userData.first_name} 
                             width={30} height={30} 
                             />
                         </a>

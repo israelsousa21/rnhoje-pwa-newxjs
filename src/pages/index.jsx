@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import baseURL from '../data/baseurl'
 import Head from 'next/head'
 import Topbar from '../components/Topbar'
 import Separator from '../components/Separator'
@@ -9,9 +10,10 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
 
   const [newsData, setNews] = useState([]);
-
+  const baseurl = baseURL()
+  
   async function getNews() {
-    const resp = await fetch(`https://rnhoje.com.br/api/v1/news/detachhome/?limit=40&page=1`)
+    const resp = await fetch(`${baseurl}news/detachhome/?limit=40&page=1`)
     const dataNews = await resp.json()
     setNews(dataNews.data)
   }

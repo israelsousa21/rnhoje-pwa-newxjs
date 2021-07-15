@@ -12,10 +12,43 @@
 
 .box p {
     color: #626262;
-    font-size: 13px;
+    font-size: 16px;
+}
+
+.box form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-content: center;
+    align-items: center;
+}
+
+.box form em {
+    font-size: 12px;
+    color: red;
+    margin-bottom: 15px;
+}
+
+.box label {
+    display: block;
+    margin-left: 15px;
+    margin-bottom: -10px;
+}
+
+.box input {
+    padding: 6px;
+    font-size: 17px;
+    font-weight: lighter;
+    display: block;
+    width: 250px;
+    height: 46px;
+    border: solid 2px #4AB306;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .box button {
+    display: block;
     font-size: 16px;
     width: 250px;
     height: 56px;
@@ -23,9 +56,23 @@
     color: #fff;
     border: solid #4AB306;
     border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
 .box button:hover {
     border: #55ca07;
     background-color: #55ca07;
+    display: block;
+}
+
+.box span {
+    display: block;
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+.box a {
+    color: #4AB306;
+    font-weight: bold;
 }
