@@ -10,16 +10,32 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
 
   const [newsData, setNews] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
   const baseurl = baseURL()
-  
-  async function getNews() {
-    const resp = await fetch(`${baseurl}news/detachhome/?limit=40&page=1`)
-    const dataNews = await resp.json()
-    setNews(dataNews.data)
+
+  async function loadNews(){
+    const perPage = 20;
+    const URL = `${baseurl}news/detachhome/?limit=${perPage}&page=${currentPage}`
+    const resp = await fetch(URL)
+    const freshNews = await resp.json()
+    setNews((prevNews) => [...prevNews, ...freshNews.data])
   }
+
   useEffect(() => {
-    getNews()
-  }, [])
+    loadNews()
+  }, [currentPage])
+  //console.log(newsData)
+  
+  useEffect(() => {
+    const intersectionObserver = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        //console.log('Sentinela appears!', currentPage + 1)
+        setCurrentPage((currentValue) => currentValue + 1);
+      }
+    })
+    intersectionObserver.observe(document.querySelector('#sentinel'));
+    return () => intersectionObserver.disconnect();
+  }, []);
  
   return (
     <div className={styles.container}>
@@ -33,7 +49,7 @@ export default function Home() {
       
       {
         newsData.map((news) => (
-          <News category={news.category}
+          <News key={news.id} category={news.category}
             title={news.title}
             miniheadline={news.miniheadline}
             image={news.photos.medium}
@@ -44,6 +60,7 @@ export default function Home() {
         ))
       }
       <Separator />
+      <div id="sentinel" className={styles.sentinel}></div>
 
       <Menubar page="home" />
 
